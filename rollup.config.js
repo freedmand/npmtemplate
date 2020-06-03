@@ -23,7 +23,7 @@ export default {
 
     // Live reload in watch mode
     ...(watch ? [
-      serve(),
+      serve('public'),
       livereload()
     ] : [])
   ],

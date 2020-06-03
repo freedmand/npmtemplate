@@ -2,7 +2,7 @@
 	"name": "<packagename>",
 	"version": "1.0.0",
 	"description": "<description>",
-	"main": "index.js",
+	"main": "src/main.js",
 	"scripts": {
 		"dev": "NODE_ENV=development rollup -c -w",
 		"build": "NODE_ENV=production rollup -c -w",
