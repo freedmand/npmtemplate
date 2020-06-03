@@ -1,4 +1,6 @@
 // rollup.config.js
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import compiler from '@ampproject/rollup-plugin-closure-compiler';
 import serve from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload'
@@ -14,6 +16,10 @@ export default {
     name: '<packagename>',
   },
   plugins: [
+    // Resolve node modules
+    resolve(),
+    commonjs(),
+
     // Minify outside of dev mode
     ...(!dev ? [
       compiler({
